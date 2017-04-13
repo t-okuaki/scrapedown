@@ -1,3 +1,45 @@
 #!/usr/bin/env ruby
 
+require 'open-uri'
+require 'nokogiri'
+require 'rbconfig'
 require "scrapedown"
+
+def interval
+  sleep 1
+  puts "\n"
+end
+
+unless RbConfig::CONFIG['host_os'] =~ /darwin|mac os/
+  puts "This command is unavailable in your OS."
+  exit
+end
+
+charset = nil
+
+loop{
+  puts "enter URL or enter 'exit' to exit"
+
+  url = gets.chomp
+  break if url == 'exit'
+  next if url.empty?
+
+  begin
+    html = open(url) do |f|
+      charset = f.charset
+      f.read
+    end
+  rescue => e
+    puts "Failed to open url!"
+    interval
+    next
+  end
+  doc = Nokogiri::HTML.parse(html, nil, charset)
+  markdown_title = "[#{doc.title}](#{url})"
+
+  # puts "charset: #{charset}"
+  puts markdown_title
+  system "echo '#{markdown_title}' | pbcopy"
+  puts "copied to clipboard!"
+  interval
+}
