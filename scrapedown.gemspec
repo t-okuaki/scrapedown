@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A command to scrape page title and convert it to Markdown link format.}
   spec.description   = %q{A command to scrape page title and convert it to Markdown link format.}
-  spec.homepage      = "https://github.com/t-okuaki"
+  spec.homepage      = "https://github.com/t-okuaki/scrapedown"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
