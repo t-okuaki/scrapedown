@@ -21,7 +21,7 @@ loop{
   puts "enter URL or enter 'exit' to exit"
 
   url = gets.chomp
-  break if url == 'exit'
+  exit if url == 'exit'
   next if url.empty?
 
   begin
