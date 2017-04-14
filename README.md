@@ -1,8 +1,6 @@
 # Scrapedown
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/scrapedown`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A command to scrape page title and convert it to Markdown link format.
 
 ## Installation
 
@@ -22,7 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can use `scrapedown` command:
+
+```bash
+$ scrapedown
+enter URL or enter 'exit' to exit
+```
+
+Enter URL, and you can get a page title formatted to Markdown.
+The page title is copied to clipboard.
+
+```bash
+$ scrapedown
+enter URL or enter 'exit' to exit
+https://github.com/t-okuaki/scrapedown
+[GitHub - t-okuaki/scrapedown](https://github.com/t-okuaki/scrapedown)
+copied to clipboard!
+```
 
 ## Development
 
@@ -38,4 +52,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
