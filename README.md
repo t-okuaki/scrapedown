@@ -1,6 +1,7 @@
 # Scrapedown
 
 A command to scrape page title and convert it to Markdown link format.
+This command is available in macOS.
 
 ## Installation
 
