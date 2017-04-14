@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["t-okuaki"]
   spec.email         = ["t-okuaki@nekojarashi.com"]
 
-  spec.summary       = %q{scrapedown}
-  spec.description   = %q{scrapedown}
+  spec.summary       = %q{A command to scrape page title and convert it to Markdown link format.}
+  spec.description   = %q{A command to scrape page title and convert it to Markdown link format.}
   spec.homepage      = "https://github.com/t-okuaki"
   spec.license       = "MIT"
 
